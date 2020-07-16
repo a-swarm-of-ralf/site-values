@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Question Personalization</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cerulean/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/navbar-top.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">Personalizing Sale Questions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+
+    <main role="main" class="container">
+
+        <div class="row">
+            <div class="col-sm p-b">
+                <div class="card bg-gray">
+                    <div class="card-body">
+                        <h1>Selling a Product</h1>
+                        <p>
+                            We have a product we want to sell to a customer with certain personality traits. We would
+                            like to ask you to formulate a question to ask this customer that you think has a high
+                            likelihood of success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 p-b">
+                <div class="card bg-gray">
+                    <div class="card-body">
+                        <h6>Product: <i class="text-info">Bank Account in Bitcoin</i></h6>
+                        <p>
+                            The product is a bank account for payments.
+                        </p>
+                        <ul>
+                            <li>Bank account as Normal (debitcard, interest, ect...)</li>
+                            <li>All funds stored in Bitcoin</li>
+                            <li>Transactions in Bitcoin</li>
+                            <li>Transaction in other valuta are converted to Bitcoin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 p-b">
+                <div class="card bg-gray">
+                    <div class="card-body">
+                        <h6>Personality Trait: <b><i class="text-info">power</i></b></h6>
+                        <p>
+                            This customer values <b><i class="text-info">power</i></b> highly.
+                        </p>
+                        <p><small>
+                                People who value power care about authorty and wealth. They focus on social esteem and
+                                emphasize the attainment or preservation of a dominant position within the
+                                their social group.
+                            </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm p-b">
+                <div class="card bg-gray">
+                    <div class="card-body">
+                        <p>
+                            How would you sell a <i class="text-info">Bank Account in Bitcoin</i> to a customer that
+                            highly values <i class="text-info">power</i> in one sentence or question?
+                        </p>
+                        <p>
+                            Please formulate your sentence or question and enter it below.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Personalized Sales Sentence or Question</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Sentence or Question"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col col-sm-2">
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="height: 100%">Submit</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD04GIi5OD_PVSCIfBI7L6GOadv_EUoBn0",
+            authDomain: "q-values.firebaseapp.com",
+            databaseURL: "https://q-values.firebaseio.com",
+            projectId: "q-values",
+            storageBucket: "q-values.appspot.com",
+            messagingSenderId: "653739832452",
+            appId: "1:653739832452:web:95a10d0a6371ff91f4fed1",
+            measurementId: "G-EWK1JRR4B3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+
+</html>
